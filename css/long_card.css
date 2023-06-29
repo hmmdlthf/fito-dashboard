@@ -34,10 +34,9 @@
   align-items: flex-end;
   flex-direction: column;
   justify-content: space-around;
-  margin-right: 10px;
 }
 .long__card .chart .chart__box {
-  width: calc(100% - 40px);
+  width: calc(100% - 30px);
 }
 .long__card .chart .horizontal__f {
   width: 100%;
@@ -46,8 +45,13 @@
   justify-content: flex-end;
 }
 .long__card .chart .horizontal__f > div {
-  width: calc(100% - 40px);
+  width: calc(100% - 30px);
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.long__card .chart .horizontal__f > div span {
+  transform: rotateZ(-45deg);
+  font-size: 0.8rem;
+  font-weight: 500;
 }/*# sourceMappingURL=long_card.css.map */

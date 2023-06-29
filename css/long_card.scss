@@ -37,12 +37,11 @@
             align-items: flex-end;
             flex-direction: column;
             justify-content: space-around;
-            margin-right: 10px;
             //transform: translateY(calc(-100% / 10));
         }
 
         .chart__box {
-            width: calc(100% - 40px);
+            width: calc(100% - 30px);
             // border: solid 1px var(--color-grey-2);
         }
 
@@ -53,10 +52,16 @@
             justify-content: flex-end;
 
             >div {
-                width: calc(100% - 40px);
+                width: calc(100% - 30px);
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+
+                span {
+                    transform: rotateZ(-45deg);
+                    font-size: .8rem;
+                    font-weight: 500;
+                }
             }
         }
     }

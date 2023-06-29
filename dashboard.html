@@ -303,7 +303,7 @@
                     by <a href="https://me.aftersite.lk">Aftersite</a>
                 </div>
             </div>
-        </div>  
+        </div>
         <script>
             function toggleNavBtn() {
                 document.getElementById("nav__btn").classList.toggle("active");
@@ -977,7 +977,8 @@
                             </div>
                             <div class="chart__box" style="--no-c: 12;" id="chart__box">
                                 <svg id="chart" height="315px" width="100%">
-                                    <g id="table_lines_group" style="transform: translateY(calc(100% / 10));"></g>
+                                    <g id="table_lines_group"
+                                        style="transform: translateY(calc(100% / 10)) translateX(calc(100% / 24));"></g>
                                 </svg>
                                 <script>
                                     let chart_box = document.getElementById('chart__box');
@@ -989,12 +990,24 @@
                                     let line_gap = width / no_c_h;
                                     let line_gap_v = height / no_c_v;
                                     let table_lines_group = document.getElementById('table_lines_group');
-                                    
+
                                     createVLines(no_c_h, table_lines_group, height, line_gap)
                                     createHLines(no_c_v, table_lines_group, width, line_gap_v)
 
+                                    let lines = [
+                                        { color: 'hwb(28 12% 2%)', data: [83, 66, 83, 33, 66, 66, 83, 50, 50, 83, 8, 50] },
+                                        { color: 'hwb(191 12% 2%)', data: [65, 16, 70, 70, 100, 100, 33, 83, 70, 70, 70, 70] },
+                                        { color: 'hwb(292 12% 2%)', data: [54, 54, 54, 0, 0, 33, 0, 17, 17, 0, 0, 0] },
+                                    ]
 
+                                    function createAllLines() {
+                                        lines.forEach(x => {
+                                            createline1lines(no_c_h, table_lines_group, height, line_gap, x.data, x.color)
+                                            createline1Dots(no_c_h, table_lines_group, height, line_gap, x.data, x.color)
+                                        })
+                                    }
 
+                                    createAllLines()
                                 </script>
                             </div>
                             <div class="horizontal__f">
