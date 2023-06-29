@@ -1,0 +1,76 @@
+@import 'variables';
+
+.body {
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--color-2);
+    padding-top: 7rem;
+
+    .body__wrapper {
+        width: 100%;
+        padding-inline: .5rem;
+        padding-block: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.card__style3 {
+    height: 100%;
+    justify-content: flex-start;
+    h3 {
+        padding-bottom: 1rem;
+    }
+    .card__body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        >* + * {
+            margin-top: 1.5rem;
+        }
+
+        .card__des {
+            text-align: center;
+            font-size: .8rem;
+            color: var(--color-grey-2);
+            max-width: 65ch;
+        }
+
+        .small__progressCard {
+            width: 100%;
+            padding-inline: 1rem;
+            padding-block: 1rem;
+            display: flex;
+            align-items: center;
+            border-radius: 1rem;
+
+            >* + * {
+                margin-left: 1rem;
+            }
+
+            >* {
+                .progress__title {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+                .time {
+                    color: hwb(var(--card-color) 12% 2%);
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        .progress {
+            padding-block: 2rem;
+        }
+    }
+}
+
+@media (min-width: $break-xl) {
+    .body {
+        margin-left: 340px;
+    }
+}

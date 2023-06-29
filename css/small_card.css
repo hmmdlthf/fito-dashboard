@@ -1,0 +1,16 @@
+@font-face {
+  font-family: poppins;
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+.small__card {
+  --theme-color: 100;
+  width: 100%;
+}
+.small__card .big__text {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.small__card .sub__text {
+  color: var(--color-grey-2);
+}/*# sourceMappingURL=small_card.css.map */

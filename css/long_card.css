@@ -1,0 +1,53 @@
+@font-face {
+  font-family: poppins;
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+.long__card {
+  justify-content: space-between;
+}
+.long__card > * + * {
+  margin-top: 2rem;
+}
+.long__card .card__header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.long__card .card__header .left {
+  width: 40%;
+}
+.long__card .card__header .icon__value {
+  display: flex;
+}
+.long__card .card__header .icon__value > * + * {
+  margin-left: 0.5rem;
+}
+.long__card .chart {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.long__card .chart .vertical__f {
+  width: 30px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 10px;
+}
+.long__card .chart .chart__box {
+  width: calc(100% - 40px);
+}
+.long__card .chart .horizontal__f {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.long__card .chart .horizontal__f > div {
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}/*# sourceMappingURL=long_card.css.map */

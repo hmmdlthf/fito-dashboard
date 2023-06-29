@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fito | Register Step 3</title>
+
+    <link rel="stylesheet" href="/css/css_variables.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/single_class_styles.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/register_step1.css">
+
+    <link rel="shortcut icon" href="/images/logo.png" type="image/png">
+
+    <script src="/js/validations.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="form__boxLarge">
+                <div class="form__header">
+                    <div class="form__title">Form Step 3</div>
+                </div>
+                <form class="form__body">
+                    <div class="col">
+                        <div class="progress">
+                            <div class="progress__bar active" style="--active-step: 2;">
+                                <div class="step active">1</div>
+                                <div class="step active">2</div>
+                                <div class="step">3</div>
+                                <div class="step">4</div>
+                                <div class="line__wrapper">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form__control form__control2">
+                            <div class="col col-md-4">
+                                <label for="monday_s">Monday*</label>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="monday_s" id="monday_s" placeholder="9.00" required>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="monday_e" id="monday_e" placeholder="6.00" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form__control form__control2">
+                            <div class="col col-md-4">
+                                <label for="tuesday_s">Tuesday*</label>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="tuesday_s" id="tuesday_s" placeholder="9.00" required>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="tuesday_e" id="tuesday_e" placeholder="6.00" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form__control form__control2">
+                            <div class="col col-md-4">
+                                <label for="wednestday_s">Wednesday*</label>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="wednesday_s" id="wednesday_s" placeholder="9.00" required>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="wednesday_e" id="wednesday_e" placeholder="6.00" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form__control form__control2">
+                            <div class="col col-md-4">
+                                <label for="thrusday_s">Thrusday*</label>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="thrusday_s" id="thrusday_s" placeholder="9.00" required>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="thrusday_e" id="thrusday_e" placeholder="6.00" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form__control form__control2">
+                            <div class="col col-md-4">
+                                <label for="friday_s">Friday*</label>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="friday_s" id="friday_s" placeholder="9.00" required>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <input type="number" name="friday_e" id="friday_e" placeholder="6.00" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <a href="/register-step2.html">
+                            <div class="btn btn__outline">Previous</div>
+                        </a>
+                        <button type="button" class="btn btn__primary" id="form_btn">Next</button>
+                    </div>
+                </form>
+                <script>
+                    var fields = ['monday', 'tuesday', 'wednesday', 'thrusday', 'friday'];
+                    document.getElementById('form_btn').addEventListener('click', () => {
+                        check2(fields, '/register-step4.html')
+                    })
+                    singleFieldCheck2(fields)
+
+                    
+                </script>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

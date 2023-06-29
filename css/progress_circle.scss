@@ -1,0 +1,55 @@
+@import 'variables';
+
+.progress__circle {
+    display: flex;
+    position: relative;
+    svg.circle {
+        z-index: 10;
+        circle {
+            fill: hwb(var(--theme-color) 12% 15%);
+        }
+    }
+    .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 11;
+        
+        svg {
+            
+        }
+    }
+
+}
+
+
+.progress__circle2 {
+    display: flex;
+    position: relative;
+    svg.circle {
+        z-index: 10;
+    }
+    .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 11;
+        font-size: 2rem;
+        font-weight: 600;
+        
+        svg {
+            
+        }
+    }
+
+}

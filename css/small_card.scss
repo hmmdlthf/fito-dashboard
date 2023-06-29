@@ -1,0 +1,16 @@
+@import 'variables';
+
+.small__card {
+    --theme-color: 100;
+    width: 100%;
+    
+    .big__text {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .sub__text {
+        color: var(--color-grey-2);
+    }
+}

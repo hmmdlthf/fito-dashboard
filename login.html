@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fito | Login</title>
+
+    <link rel="stylesheet" href="/css/css_variables.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/single_class_styles.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/grid.css">
+
+    <link rel="shortcut icon" href="/images/logo.png" type="image/png">
+
+    <script src="/js/validations.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="form__box">
+                <h1>Login</h1>
+                <div class="row">
+                    <div class="col">
+                        <div class="form__control">
+                            <label for="email">Your Email</label>
+                            <input type="email" name="email" id="email" placeholder="example@example.com" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form__control">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" placeholder="*******" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn__primary" id="form_btn" style="width: 100%;">Login</button>
+                    </div>
+                    <div class="col">
+                        <a href="/register.html" class="btn btn__outline">Join Us</a>
+                    </div>
+                </div>
+                <script>
+                    var fields = ['email', 'password'];
+                    document.getElementById('form_btn').addEventListener('click', () => {
+                        check(fields, '/index.html')
+                    })
+                    singleFieldCheck(fields)
+                </script>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

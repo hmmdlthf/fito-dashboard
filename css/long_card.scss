@@ -1,0 +1,63 @@
+@import 'variables';
+
+.long__card {
+    justify-content: space-between;
+
+    >* + * {
+        margin-top: 2rem;
+    }
+
+    .card__header {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .left {
+            width: 40%;
+        }
+
+        .icon__value {
+            display: flex;
+
+            >*+* {
+                margin-left: .5rem;
+            }
+        }
+    }
+
+    .chart {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .vertical__f {
+            width: 30px;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-right: 10px;
+            //transform: translateY(calc(-100% / 10));
+        }
+
+        .chart__box {
+            width: calc(100% - 40px);
+            // border: solid 1px var(--color-grey-2);
+        }
+
+        .horizontal__f {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            >div {
+                width: calc(100% - 40px);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }
+}

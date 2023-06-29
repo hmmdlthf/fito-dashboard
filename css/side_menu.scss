@@ -1,0 +1,192 @@
+@import 'variables';
+
+.side__menu {
+    position: fixed;
+    top: 7rem;
+    bottom: 0;
+    transform: translateX(-340px);
+    left: 0;
+    z-index: 12;
+    width: 100%;
+    max-width: 340px;
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding-block: 1rem;
+    padding-bottom: 2rem;
+
+    &.active {
+        transition: transform 0.3s ease-out;
+        transform: translateX(0);
+    }
+
+    ul {
+        text-decoration: none;
+
+        li {
+
+            a,
+            >div,
+            button {
+                width: 100%;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-block: 1rem;
+                padding-inline: 1.5rem;
+                padding-left: 2rem;
+                color: var(--color-grey-2);
+                background-color: transparent;
+
+
+                .left {
+                    display: flex;
+
+                    >*+* {
+                        margin-left: 1rem;
+                    }
+
+                    .nav__text {
+                        font-size: 1rem;
+                    }
+
+                    .menu__itemIcon {
+                        height: 1.5rem;
+                    }
+
+                }
+
+                .arrow__icon {
+                    height: 1rem;
+                }
+
+            }
+
+            .sub__menu {
+                width: 100%;
+                display: none;
+                flex-direction: column;
+
+
+                >*+* {
+                    margin-top: 1rem;
+                }
+
+                >a {
+                    width: 100%;
+                    font-size: 1rem;
+                    padding: 0;
+                    padding-left: 2.5rem;
+                    text-transform: capitalize;
+                }
+            }
+
+            &.active {
+
+                a,
+                >div,
+                button {
+                    color: var(--color-1);
+
+                    .arrow__icon {
+                        transform: rotateZ(90deg);
+                    }
+                }
+
+                .sub__menu {
+                    display: flex;
+
+                    >a {
+                        color: var(--color-grey-2);
+
+                        &.active {
+                            color: var(--color-1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .side__menuOther {
+        width: 100%;
+        padding-top: 4rem;
+        padding-inline: 2rem;
+        display: flex;
+        align-items: center;
+
+        .decorated__card {
+            position: relative;
+            background-image: linear-gradient(45deg, #5061ff, #31ceff);
+            border-radius: 1rem;
+            padding-top: 4rem;
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+            color: #fff;
+            width: 100%;
+            max-width: 250px;
+
+            >*+* {
+                margin-top: 1rem;
+            }
+
+            .card__title {
+                font-size: 1.5rem;
+                max-width: 10ch;
+            }
+
+            .card__cta {
+                display: flex;
+                align-items: center;
+                font-size: 1rem;
+                cursor: pointer;
+
+                .cta__text {
+                    margin-right: 1rem;
+                }
+            }
+
+            .gym-vector {
+                position: absolute;
+                top: -4rem;
+                right: 0;
+            }
+
+            .shape1,
+            .shape2 {
+                position: absolute;
+            }
+
+            .shape2 {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .shape1 {
+                top: .5rem;
+                left: .5rem;
+            }
+
+
+        }
+    }
+
+    .side__menuFooter {
+        width: 100%;
+        padding-top: 4rem;
+        padding-inline: 2rem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: $break-xl) {
+    .side__menu {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,167 @@
+@font-face {
+  font-family: poppins;
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+.side__menu {
+  position: fixed;
+  top: 7rem;
+  bottom: 0;
+  transform: translateX(-340px);
+  left: 0;
+  z-index: 12;
+  width: 100%;
+  max-width: 340px;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding-block: 1rem;
+  padding-bottom: 2rem;
+}
+.side__menu.active {
+  transition: transform 0.3s ease-out;
+  transform: translateX(0);
+}
+.side__menu ul {
+  text-decoration: none;
+}
+.side__menu ul li a,
+.side__menu ul li > div,
+.side__menu ul li button {
+  width: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  padding-left: 2rem;
+  color: var(--color-grey-2);
+  background-color: transparent;
+}
+.side__menu ul li a .left,
+.side__menu ul li > div .left,
+.side__menu ul li button .left {
+  display: flex;
+}
+.side__menu ul li a .left > * + *,
+.side__menu ul li > div .left > * + *,
+.side__menu ul li button .left > * + * {
+  margin-left: 1rem;
+}
+.side__menu ul li a .left .nav__text,
+.side__menu ul li > div .left .nav__text,
+.side__menu ul li button .left .nav__text {
+  font-size: 1rem;
+}
+.side__menu ul li a .left .menu__itemIcon,
+.side__menu ul li > div .left .menu__itemIcon,
+.side__menu ul li button .left .menu__itemIcon {
+  height: 1.5rem;
+}
+.side__menu ul li a .arrow__icon,
+.side__menu ul li > div .arrow__icon,
+.side__menu ul li button .arrow__icon {
+  height: 1rem;
+}
+.side__menu ul li .sub__menu {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+}
+.side__menu ul li .sub__menu > * + * {
+  margin-top: 1rem;
+}
+.side__menu ul li .sub__menu > a {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0;
+  padding-left: 2.5rem;
+  text-transform: capitalize;
+}
+.side__menu ul li.active a,
+.side__menu ul li.active > div,
+.side__menu ul li.active button {
+  color: var(--color-1);
+}
+.side__menu ul li.active a .arrow__icon,
+.side__menu ul li.active > div .arrow__icon,
+.side__menu ul li.active button .arrow__icon {
+  transform: rotateZ(90deg);
+}
+.side__menu ul li.active .sub__menu {
+  display: flex;
+}
+.side__menu ul li.active .sub__menu > a {
+  color: var(--color-grey-2);
+}
+.side__menu ul li.active .sub__menu > a.active {
+  color: var(--color-1);
+}
+.side__menu .side__menuOther {
+  width: 100%;
+  padding-top: 4rem;
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+}
+.side__menu .side__menuOther .decorated__card {
+  position: relative;
+  background-image: linear-gradient(45deg, #5061ff, #31ceff);
+  border-radius: 1rem;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  color: #fff;
+  width: 100%;
+  max-width: 250px;
+}
+.side__menu .side__menuOther .decorated__card > * + * {
+  margin-top: 1rem;
+}
+.side__menu .side__menuOther .decorated__card .card__title {
+  font-size: 1.5rem;
+  max-width: 10ch;
+}
+.side__menu .side__menuOther .decorated__card .card__cta {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.side__menu .side__menuOther .decorated__card .card__cta .cta__text {
+  margin-right: 1rem;
+}
+.side__menu .side__menuOther .decorated__card .gym-vector {
+  position: absolute;
+  top: -4rem;
+  right: 0;
+}
+.side__menu .side__menuOther .decorated__card .shape1,
+.side__menu .side__menuOther .decorated__card .shape2 {
+  position: absolute;
+}
+.side__menu .side__menuOther .decorated__card .shape2 {
+  bottom: 1rem;
+  right: 1rem;
+}
+.side__menu .side__menuOther .decorated__card .shape1 {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.side__menu .side__menuFooter {
+  width: 100%;
+  padding-top: 4rem;
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .side__menu {
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=side_menu.css.map */

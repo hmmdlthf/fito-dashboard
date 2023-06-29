@@ -1,0 +1,45 @@
+@font-face {
+  font-family: poppins;
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+.progress__circle {
+  display: flex;
+  position: relative;
+}
+.progress__circle svg.circle {
+  z-index: 10;
+}
+.progress__circle svg.circle circle {
+  fill: hwb(var(--theme-color) 12% 15%);
+}
+.progress__circle .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+}
+.progress__circle2 {
+  display: flex;
+  position: relative;
+}
+.progress__circle2 svg.circle {
+  z-index: 10;
+}
+.progress__circle2 .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+  font-size: 2rem;
+  font-weight: 600;
+}/*# sourceMappingURL=progress_circle.css.map */
