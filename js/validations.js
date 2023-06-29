@@ -11,7 +11,7 @@ function showValidationMessage(element_id) {
     error_label.setAttribute('for', `${element_id}`)
     element.parentElement.appendChild(error_label)
     error_label.innerHTML = element.validationMessage;
-    document.getElementById(`${element_id}`).classList.add('invalid')
+    document.getElementById(`${element_id}`).classList.add('invalid');
 }
 
 function hideValidationMessage(element_id) {
@@ -21,7 +21,7 @@ function hideValidationMessage(element_id) {
     }
 
     document.getElementById(`${element_id}-error`).remove()
-    document.getElementById(`${element_id}`).classList.remove('invalid')
+    document.getElementById(`${element_id}`).classList.remove('invalid');
 }
 
 function check(fields, location) {
