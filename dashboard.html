@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fito - Fitness Admin Dashboard</title>
+
+    <link rel="stylesheet" href="/css/css_variables.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/single_class_styles.css">
+    <link rel="stylesheet" href="/css/side_menu.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/header_menus.css">
+    <link rel="stylesheet" href="/css/chatbox.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/small_card.css">
+    <link rel="stylesheet" href="/css/long_card.css">
+    <link rel="stylesheet" href="/css/progress_circle.css">
+    <link rel="stylesheet" href="/css/grid.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/images/logo.png" type="image/png">
+
+    <script src="/js/script.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav__header">
+            <div class="header__logo">
+                <img src="/images/logo.png" alt="">
+                <img src="/images/logo-text.png" alt="">
+            </div>
+            <div class="nav__btn" id="nav__btn" onclick="toggleNavBtn()">
+                <span class="navBtn__line"></span>
+                <span class="navBtn__line"></span>
+                <span class="navBtn__line"></span>
+            </div>
+
+        </div>
+
+        <div class="side__menu scrollable__container" id="side__menu">
+            <ul>
+                <li class="menu__item active" id="menu__item1">
+                    <button class="">
+                        <div class="left">
+                            <svg class="menu__itemIcon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V352c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="nav__text">Dashboard</div>
+                        </div>
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <div class="sub__menu">
+                        <a href="" class="active">dashboard</a>
+                        <a href="" class="">Workout Statistic</a>
+                        <a href="" class="">Workout plan</a>
+                        <a href="" class="">distance map</a>
+                        <a href="" class="">personal record</a>
+                    </div>
+                </li>
+                <li class="menu__item">
+                    <button>
+                        <div class="left">
+                            <svg class="menu__itemIcon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M64 64V352H576V64H64zM0 64C0 28.7 28.7 0 64 0H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zM128 448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="nav__text">Apps</div>
+                        </div>
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <div class="sub__menu">
+                        <a href="" class="">dashboard</a>
+                        <a href="" class="">Workout Statistic</a>
+                        <a href="" class="">Workout plan</a>
+                        <a href="" class="">distance map</a>
+                        <a href="" class="">personal record</a>
+                    </div>
+                </li>
+                <li class="menu__item">
+                    <button>
+                        <div class="left">
+                            <svg class="menu__itemIcon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384c-17.7 0-32 14.3-32 32zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-32.8 0-61 19.7-73.3 48L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm73.3-64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="nav__text">Charts</div>
+                        </div>
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <div class="sub__menu">
+                        <a href="" class="">dashboard</a>
+                        <a href="" class="">Workout Statistic</a>
+                        <a href="" class="">Workout plan</a>
+                        <a href="" class="">distance map</a>
+                        <a href="" class="">personal record</a>
+                    </div>
+                </li>
+                <li class="menu__item">
+                    <button>
+                        <div class="left">
+                            <svg class="menu__itemIcon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="nav__text">Bootstrap</div>
+                        </div>
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <div class="sub__menu">
+                        <a href="" class="">dashboard</a>
+                        <a href="" class="">Workout Statistic</a>
+                        <a href="" class="">Workout plan</a>
+                        <a href="" class="">distance map</a>
+                        <a href="" class="">personal record</a>
+                    </div>
+                </li>
+                <li class="menu__item">
+                    <button>
+                        <div class="left">
+                            <svg class="menu__itemIcon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l2.6-2.4C267.2 438.6 256 404.6 256 368c0-97.2 78.8-176 176-176c28.3 0 55 6.7 78.7 18.5c.9-6.5 1.3-13 1.3-19.6v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5zM432 512a144 144 0 1 0 0-288 144 144 0 1 0 0 288zm16-208v48h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V384H368c-8.8 0-16-7.2-16-16s7.2-16 16-16h48V304c0-8.8 7.2-16 16-16s16 7.2 16 16z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="nav__text">Plugins</div>
+                        </div>
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <div class="sub__menu">
+                        <a href="" class="">dashboard</a>
+                        <a href="" class="">Workout Statistic</a>
+                        <a href="" class="">Workout plan</a>
+                        <a href="" class="">distance map</a>
+                        <a href="" class="">personal record</a>
+                    </div>
+                </li>
+                <li class="menu__item">
+                    <button>
+                        <div class="left">
+                            <svg class="menu__itemIcon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="nav__text">Widget</div>
+                        </div>
+                    </button>
+                </li>
+                <li class="menu__item">
+                    <button>
+                        <div class="left">
+                            <svg class="menu__itemIcon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M160 0c-23.7 0-44.4 12.9-55.4 32H48C21.5 32 0 53.5 0 80V400c0 26.5 21.5 48 48 48H192V176c0-44.2 35.8-80 80-80h48V80c0-26.5-21.5-48-48-48H215.4C204.4 12.9 183.7 0 160 0zM272 128c-26.5 0-48 21.5-48 48V448v16c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V243.9c0-12.7-5.1-24.9-14.1-33.9l-67.9-67.9c-9-9-21.2-14.1-33.9-14.1H320 272zM160 40a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="nav__text">Forms</div>
+                        </div>
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <div class="sub__menu">
+                        <a href="" class="">dashboard</a>
+                        <a href="" class="">Workout Statistic</a>
+                        <a href="" class="">Workout plan</a>
+                        <a href="" class="">distance map</a>
+                        <a href="" class="">personal record</a>
+                    </div>
+                </li>
+                <li class="menu__item">
+                    <button>
+                        <div class="left">
+                            <svg class="menu__itemIcon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M512 416l0-64c0-35.3-28.7-64-64-64L64 288c-35.3 0-64 28.7-64 64l0 64c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64zM64 160l0-64 144 0 16 0 0 64L64 160zm224 0l0-64 80 0c8.8 0 16 7.2 16 16l0 16-38.1 0c-21.4 0-32.1 25.9-17 41L399 239c9.4 9.4 24.6 9.4 33.9 0L503 169c15.1-15.1 4.4-41-17-41L448 128l0-16c0-44.2-35.8-80-80-80L224 32l-16 0L64 32C28.7 32 0 60.7 0 96l0 64c0 35.3 28.7 64 64 64l160 0c35.3 0 64-28.7 64-64z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="nav__text">Table</div>
+                        </div>
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <div class="sub__menu">
+                        <a href="" class="">dashboard</a>
+                        <a href="" class="">Workout Statistic</a>
+                        <a href="" class="">Workout plan</a>
+                        <a href="" class="">distance map</a>
+                        <a href="" class="">personal record</a>
+                    </div>
+                </li>
+                <li class="menu__item">
+                    <button>
+                        <div class="left">
+                            <svg class="menu__itemIcon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M160 32c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H328 280 200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="nav__text">Pages</div>
+                        </div>
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <div class="sub__menu">
+                        <a href="" class="">dashboard</a>
+                        <a href="" class="">Workout Statistic</a>
+                        <a href="" class="">Workout plan</a>
+                        <a href="" class="">distance map</a>
+                        <a href="" class="">personal record</a>
+                    </div>
+                </li>
+            </ul>
+            <script>
+                document.querySelectorAll('.menu__item button').forEach((x, i) => {
+                    x.addEventListener('click', () => {
+                        document.querySelectorAll('.menu__item').forEach((y, j) => {
+                            if (j != i) {
+                                y.classList.remove('active')
+                            }
+                        })
+                        x.parentElement.classList.toggle('active')
+                    })
+                })
+            </script>
+            <div class="side__menuOther">
+                <div class="decorated__card">
+                    <div class="card__title">
+                        Start Plan Your Workout
+                    </div>
+                    <div class="card__cta">
+                        <div class="cta__text">Check schedule</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 256 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                    <img class="shape1" src="/images/shape1.png" alt="">
+                    <img class="shape2" src="/images/shape2.svg" alt="">
+                    <img class="gym-vector" src="/images/gym-vector.png" alt="">
+                </div>
+            </div>
+            <div class="side__menuFooter">
+                <div class="footer__text">
+                    <strong>Fito Dashboard</strong><br>
+                    ©All Rights Reserved<br><br>
+                    by <a href="https://me.aftersite.lk">Aftersite</a>
+                </div>
+            </div>
+        </div>  
+        <script>
+            function toggleNavBtn() {
+                document.getElementById("nav__btn").classList.toggle("active");
+                document.getElementById("side__menu").classList.toggle("active");
+            }
+        </script>
+
+        <div class="chatbox" id="chatbox">
+            <div class="chatbox__back" onclick="toggleChatBox()"></div>
+            <div class="chatbox__front">
+                <div class="chatbox__header">
+                    <div class="item" onclick="selectChatBoxMenu('notes__btnBody', 3)" id="chatbox__headerBtn3">notes
+                    </div>
+                    <div class="item" onclick="selectChatBoxMenu('alerts__btnBody', 2)" id="chatbox__headerBtn2">alters
+                    </div>
+                    <div class="item active" onclick="selectChatBoxMenu('chat__btnBody', 1)" id="chatbox__headerBtn1">
+                        chat</div>
+                </div>
+                <div class="chatbox__body active" id="chat__btnBody">
+                    <div class="top">
+                        <div class="chatbox__title">Chat List</div>
+                        <div class="chatbox__sub">Show All</div>
+                        <div class="plus__icon">
+                            <div class="">
+                                <svg class="" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="more__icon">
+                            <div class="">
+                                <svg class="" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content scrollable__container">
+                        <div class="group">A</div>
+                        <div class="list">
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group">B</div>
+                        <div class="list">
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Bashid Parke</div>
+                                    <div class="item__time">Bashid Parke is offline</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Bashid Parke</div>
+                                    <div class="item__time">Bashid Parke is offline</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Bashid Parke</div>
+                                    <div class="item__time">Bashid Parke is offline</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group">D</div>
+                        <div class="list">
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Dashid Parke</div>
+                                    <div class="item__time">Dashid Parke is offline</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Dashid Parke</div>
+                                    <div class="item__time">Dashid Parke is offline</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Dashid Parke</div>
+                                    <div class="item__time">Dashid Parke is offline</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group">E</div>
+                        <div class="list">
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Dashid Parke</div>
+                                    <div class="item__time">Dashid Parke is offline</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Dashid Parke</div>
+                                    <div class="item__time">Dashid Parke is offline</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Dashid Parke</div>
+                                    <div class="item__time">Dashid Parke is offline</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox__body" id="alerts__btnBody">
+                    <div class="top">
+                        <div class="chatbox__title">Notifications</div>
+                        <div class="chatbox__sub">Show All</div>
+                        <div class="plus__icon">
+                            <div class="">
+                                <svg class="" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="more__icon">
+                            <div class="">
+                                <svg class="" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content scrollable__container">
+                        <div class="group">sever status</div>
+                        <div class="list">
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <span>kk</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group">social</div>
+                        <div class="list">
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <span>ru</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Bashid Parke</div>
+                                    <div class="item__time">Bashid Parke is offline</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Bashid Parke</div>
+                                    <div class="item__time">Bashid Parke is offline</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Bashid Parke</div>
+                                    <div class="item__time">Bashid Parke is offline</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group">sever status</div>
+                        <div class="list">
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <span>mu</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Dashid Parke</div>
+                                    <div class="item__time">Dashid Parke is offline</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <span>au</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Dashid Parke</div>
+                                    <div class="item__time">Dashid Parke is offline</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox__body" id="notes__btnBody">
+                    <div class="top">
+                        <div class="chatbox__title">Nots</div>
+                        <div class="chatbox__sub">Show All</div>
+                        <div class="plus__icon">
+                            <div class="">
+                                <svg class="" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="more__icon">
+                            <div class="">
+                                <svg class="" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content scrollable__container">
+                        <div class="list">
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: green;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                            <div class="item" style="--dot-color: red;">
+                                <div class="left">
+                                    <div class="item__icon">
+                                        <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item__title">Archie Parke</div>
+                                    <div class="item__time">Archie Parke is online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function toggleChatBox() {
+                document.getElementById("chatbox").classList.toggle("active")
+            }
+
+            function selectChatBoxMenu(id, btnId) {
+                document.querySelectorAll(".chatbox__body").forEach((x) => {
+                    x.classList.remove('active');
+                })
+                document.querySelectorAll(".chatbox__header .item").forEach((x) => {
+                    x.classList.remove("active")
+                })
+                document.getElementById(`chatbox__headerBtn${btnId}`).classList.add("active")
+
+                document.getElementById(id).classList.add("active");
+            }
+        </script>
+
+        <div class="body">
+            <div class="body__wrapper">
+                <div class="col col-md-6 col-xl-2-4">
+                    <div class="card small__card">
+                        <div class="progress__circle" style="--theme-color: 150;">
+                            <svg class="circle" height="110" width="110">
+                                <circle cx="55" cy="55" r="45" stroke-width="20" stroke="hwb(var(--theme-color) 55% 2%)"
+                                    fill="hwb(var(--theme-color) 12% 10%)" stroke-dasharray="314"
+                                    stroke-dashoffset="170" style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                </circle>
+                                <circle cx="55" cy="55" r="45" fill="hwb(var(--theme-color) 12% 10%)"></circle>
+                            </svg>
+                            <div class="icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M39.9353 18.3544C39.8731 18.1666 38.3337 13.75 32.5 13.75C25.9703 13.75 22.8666 17.9659 21.795 19.8719C20.6306 19.1822 19.1838 18.75 17.5 18.75C15.7922 18.75 14.35 19.1375 13.1275 19.7072C13.5697 16.695 13.6987 13.1119 13.7353 11.25H17.5C17.9175 11.25 18.3081 11.0413 18.54 10.6934L21.04 6.94344C21.4075 6.39156 21.2806 5.64813 20.7494 5.25031C18.3166 3.42531 15.1269 1.25 13.75 1.25C11.6137 1.25 6.95688 6.24344 5.16469 9.38C0.0584378 18.3153 0 31.925 0 32.5C0 32.8797 0.172188 33.2391 0.46875 33.4759C7.56469 39.1522 15.7519 40 20 40C23.3716 40 29.9756 39.4391 36.3306 35.6834C38.5938 34.3456 40 31.8706 40 29.2244V18.75C40 18.6156 39.9781 18.4822 39.9353 18.3544ZM37.5 29.2244C37.5 30.9912 36.565 32.6419 35.0584 33.5316C29.2162 36.9844 23.1166 37.5 20 37.5C16.9178 37.5 9.15156 36.9453 2.51094 31.8981C2.58406 29.19 3.14094 17.96 7.33531 10.62C9.09187 7.54813 12.7112 4.16312 13.7722 3.76562C14.4606 3.96406 16.4566 5.23219 18.2972 6.55125L16.8309 8.75H12.5C11.8091 8.75 11.25 9.30969 11.25 10C11.25 10.0822 11.2344 17.9659 10.185 21.6878C9.46375 22.3391 8.88656 22.9872 8.43125 23.4994C8.2175 23.7403 8.02969 23.9522 7.86594 24.1166C7.3775 24.605 7.3775 25.3959 7.86594 25.8841C8.35437 26.3722 9.14531 26.3725 9.63344 25.8841C9.82625 25.6913 10.0472 25.4441 10.3 25.1603C11.6003 23.6975 13.7756 21.25 17.5 21.25C20.5884 21.25 22.5 23.1966 22.5 25C22.5 25.6903 23.0591 26.25 23.75 26.25C24.4409 26.25 25 25.6903 25 25C25 23.8181 24.5506 22.6022 23.7313 21.5581C24.1503 20.66 26.5119 16.25 32.5 16.25C35.99 16.25 37.2228 18.39 37.5 18.9922V29.2244Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="big__text">42%</div>
+                        <div class="sub__text">Weekly Progress</div>
+                    </div>
+                </div>
+                <div class="col col-sm-6 col-md-6 col-xl-2-4">
+                    <div class="card small__card">
+                        <div class="progress__circle" style="--theme-color: 300;">
+                            <svg class="circle" height="110" width="110">
+                                <circle cx="55" cy="55" r="45" stroke-width="20" stroke="hwb(var(--theme-color) 55% 2%)"
+                                    fill="hwb(var(--theme-color) 12% 10%)" stroke-dasharray="314"
+                                    stroke-dashoffset="200" style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                </circle>
+                                <circle cx="55" cy="55" r="45" fill="hwb(var(--theme-color) 12% 10%)"></circle>
+                            </svg>
+                            <div class="icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M39.9353 18.3544C39.8731 18.1666 38.3337 13.75 32.5 13.75C25.9703 13.75 22.8666 17.9659 21.795 19.8719C20.6306 19.1822 19.1838 18.75 17.5 18.75C15.7922 18.75 14.35 19.1375 13.1275 19.7072C13.5697 16.695 13.6987 13.1119 13.7353 11.25H17.5C17.9175 11.25 18.3081 11.0413 18.54 10.6934L21.04 6.94344C21.4075 6.39156 21.2806 5.64813 20.7494 5.25031C18.3166 3.42531 15.1269 1.25 13.75 1.25C11.6137 1.25 6.95688 6.24344 5.16469 9.38C0.0584378 18.3153 0 31.925 0 32.5C0 32.8797 0.172188 33.2391 0.46875 33.4759C7.56469 39.1522 15.7519 40 20 40C23.3716 40 29.9756 39.4391 36.3306 35.6834C38.5938 34.3456 40 31.8706 40 29.2244V18.75C40 18.6156 39.9781 18.4822 39.9353 18.3544ZM37.5 29.2244C37.5 30.9912 36.565 32.6419 35.0584 33.5316C29.2162 36.9844 23.1166 37.5 20 37.5C16.9178 37.5 9.15156 36.9453 2.51094 31.8981C2.58406 29.19 3.14094 17.96 7.33531 10.62C9.09187 7.54813 12.7112 4.16312 13.7722 3.76562C14.4606 3.96406 16.4566 5.23219 18.2972 6.55125L16.8309 8.75H12.5C11.8091 8.75 11.25 9.30969 11.25 10C11.25 10.0822 11.2344 17.9659 10.185 21.6878C9.46375 22.3391 8.88656 22.9872 8.43125 23.4994C8.2175 23.7403 8.02969 23.9522 7.86594 24.1166C7.3775 24.605 7.3775 25.3959 7.86594 25.8841C8.35437 26.3722 9.14531 26.3725 9.63344 25.8841C9.82625 25.6913 10.0472 25.4441 10.3 25.1603C11.6003 23.6975 13.7756 21.25 17.5 21.25C20.5884 21.25 22.5 23.1966 22.5 25C22.5 25.6903 23.0591 26.25 23.75 26.25C24.4409 26.25 25 25.6903 25 25C25 23.8181 24.5506 22.6022 23.7313 21.5581C24.1503 20.66 26.5119 16.25 32.5 16.25C35.99 16.25 37.2228 18.39 37.5 18.9922V29.2244Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="big__text">67cal</div>
+                        <div class="sub__text">Calories Burn</div>
+                    </div>
+                </div>
+                <div class="col col-sm-6 col-md-4 col-xl-2-4">
+                    <div class="card small__card">
+                        <div class="progress__circle" style="--theme-color: 350;">
+                            <svg class="circle" height="110" width="110">
+                                <circle cx="55" cy="55" r="45" stroke-width="20" stroke="hwb(var(--theme-color) 55% 2%)"
+                                    fill="hwb(var(--theme-color) 12% 10%)" stroke-dasharray="314"
+                                    stroke-dashoffset="150" style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                </circle>
+                                <circle cx="55" cy="55" r="45" fill="hwb(var(--theme-color) 12% 10%)"></circle>
+                            </svg>
+                            <div class="icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M39.9353 18.3544C39.8731 18.1666 38.3337 13.75 32.5 13.75C25.9703 13.75 22.8666 17.9659 21.795 19.8719C20.6306 19.1822 19.1838 18.75 17.5 18.75C15.7922 18.75 14.35 19.1375 13.1275 19.7072C13.5697 16.695 13.6987 13.1119 13.7353 11.25H17.5C17.9175 11.25 18.3081 11.0413 18.54 10.6934L21.04 6.94344C21.4075 6.39156 21.2806 5.64813 20.7494 5.25031C18.3166 3.42531 15.1269 1.25 13.75 1.25C11.6137 1.25 6.95688 6.24344 5.16469 9.38C0.0584378 18.3153 0 31.925 0 32.5C0 32.8797 0.172188 33.2391 0.46875 33.4759C7.56469 39.1522 15.7519 40 20 40C23.3716 40 29.9756 39.4391 36.3306 35.6834C38.5938 34.3456 40 31.8706 40 29.2244V18.75C40 18.6156 39.9781 18.4822 39.9353 18.3544ZM37.5 29.2244C37.5 30.9912 36.565 32.6419 35.0584 33.5316C29.2162 36.9844 23.1166 37.5 20 37.5C16.9178 37.5 9.15156 36.9453 2.51094 31.8981C2.58406 29.19 3.14094 17.96 7.33531 10.62C9.09187 7.54813 12.7112 4.16312 13.7722 3.76562C14.4606 3.96406 16.4566 5.23219 18.2972 6.55125L16.8309 8.75H12.5C11.8091 8.75 11.25 9.30969 11.25 10C11.25 10.0822 11.2344 17.9659 10.185 21.6878C9.46375 22.3391 8.88656 22.9872 8.43125 23.4994C8.2175 23.7403 8.02969 23.9522 7.86594 24.1166C7.3775 24.605 7.3775 25.3959 7.86594 25.8841C8.35437 26.3722 9.14531 26.3725 9.63344 25.8841C9.82625 25.6913 10.0472 25.4441 10.3 25.1603C11.6003 23.6975 13.7756 21.25 17.5 21.25C20.5884 21.25 22.5 23.1966 22.5 25C22.5 25.6903 23.0591 26.25 23.75 26.25C24.4409 26.25 25 25.6903 25 25C25 23.8181 24.5506 22.6022 23.7313 21.5581C24.1503 20.66 26.5119 16.25 32.5 16.25C35.99 16.25 37.2228 18.39 37.5 18.9922V29.2244Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="big__text">5 Left</div>
+                        <div class="sub__text">Diet Programs</div>
+                    </div>
+                </div>
+                <div class="col col-sm-6 col-md-4 col-xl-2-4">
+                    <div class="card small__card">
+                        <div class="progress__circle" style="--theme-color: 70;">
+                            <svg class="circle" height="110" width="110">
+                                <circle cx="55" cy="55" r="45" stroke-width="20" stroke="hwb(var(--theme-color) 55% 2%)"
+                                    fill="hwb(var(--theme-color) 12% 10%)" stroke-dasharray="314"
+                                    stroke-dashoffset="200" style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                </circle>
+                                <circle cx="55" cy="55" r="45" fill="hwb(var(--theme-color) 12% 10%)"></circle>
+                            </svg>
+                            <div class="icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M39.9353 18.3544C39.8731 18.1666 38.3337 13.75 32.5 13.75C25.9703 13.75 22.8666 17.9659 21.795 19.8719C20.6306 19.1822 19.1838 18.75 17.5 18.75C15.7922 18.75 14.35 19.1375 13.1275 19.7072C13.5697 16.695 13.6987 13.1119 13.7353 11.25H17.5C17.9175 11.25 18.3081 11.0413 18.54 10.6934L21.04 6.94344C21.4075 6.39156 21.2806 5.64813 20.7494 5.25031C18.3166 3.42531 15.1269 1.25 13.75 1.25C11.6137 1.25 6.95688 6.24344 5.16469 9.38C0.0584378 18.3153 0 31.925 0 32.5C0 32.8797 0.172188 33.2391 0.46875 33.4759C7.56469 39.1522 15.7519 40 20 40C23.3716 40 29.9756 39.4391 36.3306 35.6834C38.5938 34.3456 40 31.8706 40 29.2244V18.75C40 18.6156 39.9781 18.4822 39.9353 18.3544ZM37.5 29.2244C37.5 30.9912 36.565 32.6419 35.0584 33.5316C29.2162 36.9844 23.1166 37.5 20 37.5C16.9178 37.5 9.15156 36.9453 2.51094 31.8981C2.58406 29.19 3.14094 17.96 7.33531 10.62C9.09187 7.54813 12.7112 4.16312 13.7722 3.76562C14.4606 3.96406 16.4566 5.23219 18.2972 6.55125L16.8309 8.75H12.5C11.8091 8.75 11.25 9.30969 11.25 10C11.25 10.0822 11.2344 17.9659 10.185 21.6878C9.46375 22.3391 8.88656 22.9872 8.43125 23.4994C8.2175 23.7403 8.02969 23.9522 7.86594 24.1166C7.3775 24.605 7.3775 25.3959 7.86594 25.8841C8.35437 26.3722 9.14531 26.3725 9.63344 25.8841C9.82625 25.6913 10.0472 25.4441 10.3 25.1603C11.6003 23.6975 13.7756 21.25 17.5 21.25C20.5884 21.25 22.5 23.1966 22.5 25C22.5 25.6903 23.0591 26.25 23.75 26.25C24.4409 26.25 25 25.6903 25 25C25 23.8181 24.5506 22.6022 23.7313 21.5581C24.1503 20.66 26.5119 16.25 32.5 16.25C35.99 16.25 37.2228 18.39 37.5 18.9922V29.2244Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="big__text">8 Hours</div>
+                        <div class="sub__text">Sleeping Potency</div>
+                    </div>
+                </div>
+                <div class="col col-sm-6 col-md-4 col-xl-2-4">
+                    <div class="card small__card">
+                        <div class="progress__circle" style="--theme-color: 200;">
+                            <svg class="circle" height="110" width="110">
+                                <circle cx="55" cy="55" r="45" stroke-width="20" stroke="hwb(var(--theme-color) 55% 2%)"
+                                    fill="hwb(var(--theme-color) 12% 10%)" stroke-dasharray="314" stroke-dashoffset=""
+                                    style="transform: rotateZ(-90deg); transform-origin: 50%;"></circle>
+                                <circle cx="55" cy="55" r="45" fill="hwb(var(--theme-color) 12% 10%)"></circle>
+                            </svg>
+                            <div class="icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M39.9353 18.3544C39.8731 18.1666 38.3337 13.75 32.5 13.75C25.9703 13.75 22.8666 17.9659 21.795 19.8719C20.6306 19.1822 19.1838 18.75 17.5 18.75C15.7922 18.75 14.35 19.1375 13.1275 19.7072C13.5697 16.695 13.6987 13.1119 13.7353 11.25H17.5C17.9175 11.25 18.3081 11.0413 18.54 10.6934L21.04 6.94344C21.4075 6.39156 21.2806 5.64813 20.7494 5.25031C18.3166 3.42531 15.1269 1.25 13.75 1.25C11.6137 1.25 6.95688 6.24344 5.16469 9.38C0.0584378 18.3153 0 31.925 0 32.5C0 32.8797 0.172188 33.2391 0.46875 33.4759C7.56469 39.1522 15.7519 40 20 40C23.3716 40 29.9756 39.4391 36.3306 35.6834C38.5938 34.3456 40 31.8706 40 29.2244V18.75C40 18.6156 39.9781 18.4822 39.9353 18.3544ZM37.5 29.2244C37.5 30.9912 36.565 32.6419 35.0584 33.5316C29.2162 36.9844 23.1166 37.5 20 37.5C16.9178 37.5 9.15156 36.9453 2.51094 31.8981C2.58406 29.19 3.14094 17.96 7.33531 10.62C9.09187 7.54813 12.7112 4.16312 13.7722 3.76562C14.4606 3.96406 16.4566 5.23219 18.2972 6.55125L16.8309 8.75H12.5C11.8091 8.75 11.25 9.30969 11.25 10C11.25 10.0822 11.2344 17.9659 10.185 21.6878C9.46375 22.3391 8.88656 22.9872 8.43125 23.4994C8.2175 23.7403 8.02969 23.9522 7.86594 24.1166C7.3775 24.605 7.3775 25.3959 7.86594 25.8841C8.35437 26.3722 9.14531 26.3725 9.63344 25.8841C9.82625 25.6913 10.0472 25.4441 10.3 25.1603C11.6003 23.6975 13.7756 21.25 17.5 21.25C20.5884 21.25 22.5 23.1966 22.5 25C22.5 25.6903 23.0591 26.25 23.75 26.25C24.4409 26.25 25 25.6903 25 25C25 23.8181 24.5506 22.6022 23.7313 21.5581C24.1503 20.66 26.5119 16.25 32.5 16.25C35.99 16.25 37.2228 18.39 37.5 18.9922V29.2244Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="big__text">974 People</div>
+                        <div class="sub__text">Total Members</div>
+                    </div>
+                </div>
+                <div class="col col-xl-9">
+                    <div class="card long__card">
+                        <div class="card__header">
+                            <div class="left">
+                                <h3>Workout Statistic</h3>
+                                <small>Lorem ipsum dolor sit amet.</small>
+                            </div>
+                            <div class="icon__value">
+                                <svg class="mr-2 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip4)">
+                                        <path
+                                            d="M0.988941 17.074C0.32826 17.2006 -0.1046 17.8385 0.021967 18.4992C0.133346 19.0814 0.644678 19.4864 1.21676 19.4864C1.2927 19.4864 1.37117 19.4788 1.44712 19.4636L6.45918 18.5017C6.74522 18.446 7.00089 18.2916 7.18315 18.0638L9.33479 15.3502L8.61591 14.9832C8.08433 14.7148 7.71473 14.2288 7.58816 13.639L5.55802 16.1982L0.988941 17.074Z"
+                                            fill="#FF9432" data-darkreader-inline-fill=""
+                                            style="--darkreader-inline-fill: #ff993d;"></path>
+                                        <path
+                                            d="M18.84 6.493C20.3135 6.493 21.508 5.29848 21.508 3.82496C21.508 2.35144 20.3135 1.15692 18.84 1.15692C17.3664 1.15692 16.1719 2.35144 16.1719 3.82496C16.1719 5.29848 17.3664 6.493 18.84 6.493Z"
+                                            fill="#FF9432" data-darkreader-inline-fill=""
+                                            style="--darkreader-inline-fill: #ff993d;"></path>
+                                        <path
+                                            d="M13.0179 3.15671C12.7369 2.86813 12.4762 2.75422 12.1902 2.75422C12.0864 2.75422 11.9826 2.76941 11.8712 2.79472L7.29202 3.88067C6.65918 4.03002 6.26936 4.66539 6.4187 5.29569C6.5478 5.8374 7.02876 6.20192 7.56287 6.20192C7.65403 6.20192 7.74513 6.19179 7.83628 6.16901L11.7371 5.24507C11.9902 5.52605 13.2584 6.90057 13.4888 7.14358C11.8763 8.86996 10.2638 10.5938 8.65135 12.3202C8.62604 12.3481 8.60328 12.3759 8.58047 12.4037C8.10964 13.0036 8.25395 13.9453 8.96273 14.3022L13.9064 16.826L11.3396 20.985C10.9878 21.5571 11.165 22.3063 11.7371 22.6607C11.937 22.7848 12.1573 22.843 12.375 22.843C12.7825 22.843 13.1824 22.638 13.4128 22.2658L16.6732 16.9829C16.8529 16.6918 16.901 16.34 16.8073 16.0134C16.7137 15.6843 16.4884 15.411 16.1821 15.2565L12.8331 13.5529L16.3543 9.7863L19.0122 12.0392C19.2324 12.2265 19.5032 12.3176 19.7716 12.3176C20.0601 12.3176 20.3487 12.2113 20.574 12.0038L23.6243 9.16106C24.1002 8.71808 24.128 7.97386 23.685 7.49797C23.4521 7.24989 23.1382 7.12333 22.8243 7.12333C22.5383 7.12333 22.2497 7.22711 22.0244 7.43721L19.7412 9.56101C19.7386 9.56354 14.0178 4.1819 13.0179 3.15671Z"
+                                            fill="#FF9432" data-darkreader-inline-fill=""
+                                            style="--darkreader-inline-fill: #ff993d;"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip4">
+                                            <rect width="24" height="24" fill="white" data-darkreader-inline-fill=""
+                                                style="--darkreader-inline-fill: #e8e6e3;"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <div>
+                                    <h3>45%</h3>
+                                    <small>Running</small>
+                                </div>
+                            </div>
+                            <div class="icon__value">
+                                <svg class="mr-2 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.8586 5.22599L5.87121 10.5543C5.50758 11.0846 5.64394 11.8068 6.17172 12.1679L11.1945 15.6098V18.9558C11.1945 19.5921 11.6995 20.125 12.3359 20.1376C12.9874 20.1477 13.5177 19.625 13.5177 18.976V15.0013C13.5177 14.6174 13.3283 14.2588 13.0126 14.0442L9.79041 11.8346L12.5025 8.95836L13.8914 12.1225C14.0758 12.5442 14.4949 12.817 14.9546 12.817H19.1844C19.8207 12.817 20.3536 12.3119 20.3662 11.6755C20.3763 11.024 19.8536 10.4937 19.2046 10.4937H15.7172C15.2576 9.44824 14.7677 8.41288 14.3409 7.35228C14.1237 6.81693 14.0025 6.5846 13.6036 6.21592C13.5227 6.14016 12.9596 5.62501 12.4571 5.16541C11.995 4.74619 11.2828 4.77397 10.8586 5.22599Z"
+                                        fill="#1EA7C5" data-darkreader-inline-fill=""
+                                        style="--darkreader-inline-fill: #49c8e3;"></path>
+                                    <path
+                                        d="M15.6162 5.80681C17.0861 5.80681 18.2778 4.61517 18.2778 3.1452C18.2778 1.67523 17.0861 0.483582 15.6162 0.483582C14.1462 0.483582 12.9545 1.67523 12.9545 3.1452C12.9545 4.61517 14.1462 5.80681 15.6162 5.80681Z"
+                                        fill="#1EA7C5" data-darkreader-inline-fill=""
+                                        style="--darkreader-inline-fill: #49c8e3;"></path>
+                                    <path
+                                        d="M4.89899 23.5164C7.60463 23.5164 9.79798 21.3231 9.79798 18.6174C9.79798 15.9118 7.60463 13.7184 4.89899 13.7184C2.19335 13.7184 0 15.9118 0 18.6174C0 21.3231 2.19335 23.5164 4.89899 23.5164Z"
+                                        fill="#1EA7C5" data-darkreader-inline-fill=""
+                                        style="--darkreader-inline-fill: #49c8e3;"></path>
+                                    <path
+                                        d="M19.101 23.5164C21.8066 23.5164 24 21.3231 24 18.6174C24 15.9118 21.8066 13.7184 19.101 13.7184C16.3954 13.7184 14.202 15.9118 14.202 18.6174C14.202 21.3231 16.3954 23.5164 19.101 23.5164Z"
+                                        fill="#1EA7C5" data-darkreader-inline-fill=""
+                                        style="--darkreader-inline-fill: #49c8e3;"></path>
+                                </svg>
+                                <div>
+                                    <h3>27%</h3>
+                                    <small>Cycling</small>
+                                </div>
+                            </div>
+                            <div class="icon__value">
+                                <svg class="mr-2 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip5)">
+                                        <path
+                                            d="M11.9997 5.9999C13.6566 5.9999 14.9997 4.65677 14.9997 2.99995C14.9997 1.34312 13.6566 0 11.9997 0C10.3429 0 8.9998 1.34312 8.9998 2.99995C8.9998 4.65677 10.3429 5.9999 11.9997 5.9999Z"
+                                            fill="#C046D3" data-darkreader-inline-fill=""
+                                            style="--darkreader-inline-fill: #c554d6;"></path>
+                                        <path
+                                            d="M17.8305 21.8297L14.1361 23.2153L15.9733 23.9042C16.764 24.1978 17.6171 23.791 17.9046 23.0261C18.0577 22.618 18.0124 22.1905 17.8305 21.8297Z"
+                                            fill="#C046D3" data-darkreader-inline-fill=""
+                                            style="--darkreader-inline-fill: #c554d6;"></path>
+                                        <path
+                                            d="M5.02677 16.5949C4.25263 16.3078 3.3869 16.6974 3.09543 17.473C2.80467 18.2486 3.19799 19.1128 3.97354 19.4043L5.5918 20.0111L9.86412 18.4088L5.02677 16.5949Z"
+                                            fill="#C046D3" data-darkreader-inline-fill=""
+                                            style="--darkreader-inline-fill: #c554d6;"></path>
+                                        <path
+                                            d="M20.9045 17.473C20.613 16.6974 19.7473 16.3078 18.9732 16.5949L6.97345 21.0948C6.19781 21.3863 5.80453 22.2505 6.0953 23.0262C6.38278 23.7908 7.23572 24.198 8.02664 23.9043L20.0264 19.4044C20.8021 19.1129 21.1953 18.2487 20.9045 17.473Z"
+                                            fill="#C046D3" data-darkreader-inline-fill=""
+                                            style="--darkreader-inline-fill: #c554d6;"></path>
+                                        <path
+                                            d="M22.4998 11.9998H18.9271L16.3417 6.82899C16.073 6.29213 15.5265 5.98627 14.9632 5.99991L11.9997 5.9999L9.03663 5.99991C8.47343 5.98627 7.92757 6.29217 7.65828 6.82899L5.07289 11.9998H1.50022C0.671898 11.9998 0.000274658 12.6714 0.000274658 13.4997C0.000274658 14.328 0.671898 14.9997 1.50022 14.9997H6.00012C6.56848 14.9997 7.08776 14.6789 7.34187 14.1706L9.00002 10.8543V16.483L11.9999 17.6079L14.9999 16.4827V10.8543L16.6581 14.1706C16.9122 14.6789 17.4315 14.9997 17.9998 14.9997H22.4997C23.328 14.9997 23.9997 14.328 23.9997 13.4997C23.9997 12.6714 23.3281 11.9998 22.4998 11.9998Z"
+                                            fill="#C046D3" data-darkreader-inline-fill=""
+                                            style="--darkreader-inline-fill: #c554d6;"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip5">
+                                            <rect width="24" height="24" fill="white" data-darkreader-inline-fill=""
+                                                style="--darkreader-inline-fill: #e8e6e3;"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <div>
+                                    <h3>86%</h3>
+                                    <small>Yoga</small>
+                                </div>
+                            </div>
+                            <select name="period" id="">
+                                <option value="" selected>Weekly</option>
+                                <option value="">Monthly</option>
+                                <option value="">Yearly</option>
+                                <option value="">Daily</option>
+                            </select>
+                        </div>
+                        <div class="chart">
+                            <div class="vertical__f">
+                                <span>120</span>
+                                <span>90</span>
+                                <span>60</span>
+                                <span>30</span>
+                                <span>0</span>
+                            </div>
+                            <div class="chart__box" style="--no-c: 12;" id="chart__box">
+                                <svg id="chart" height="315px" width="100%">
+                                    <g id="table_lines_group" style="transform: translateY(calc(100% / 10));"></g>
+                                </svg>
+                                <script>
+                                    let chart_box = document.getElementById('chart__box');
+                                    let width = chart_box.offsetWidth;
+                                    let height = chart_box.offsetHeight;
+                                    let svg = document.getElementById('chart');
+                                    let no_c_h = 12;
+                                    let no_c_v = 5;
+                                    let line_gap = width / no_c_h;
+                                    let line_gap_v = height / no_c_v;
+                                    let table_lines_group = document.getElementById('table_lines_group');
+                                    
+                                    createVLines(no_c_h, table_lines_group, height, line_gap)
+                                    createHLines(no_c_v, table_lines_group, width, line_gap_v)
+
+
+
+                                </script>
+                            </div>
+                            <div class="horizontal__f">
+                                <div>
+                                    <span>Jan</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Apr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                    <span>Jul</span>
+                                    <span>Aug</span>
+                                    <span>Sep</span>
+                                    <span>Oct</span>
+                                    <span>Nov</span>
+                                    <span>Dec</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-xl-3">
+                    <div class="card card__style3">
+                        <h3>Workout Progress</h3>
+                        <div class="card__body">
+                            <div class="progress">
+                                <div class="progress__circle2" style="--theme-color: 91;">
+                                    <svg class="circle" height="200" width="200">
+                                        <circle cx="100" cy="100" r="85" stroke-width="30" stroke="var(--color-grey)"
+                                            fill="transparent" stroke-dasharray="400, 400"
+                                            style="transform: rotateZ(135deg); transform-origin: 50%;">
+                                        </circle>
+                                        <circle cx="100" cy="100" r="85" stroke-width="30"
+                                            stroke="hwb(var(--theme-color) 5% 35%)" fill="transparent"
+                                            stroke-dasharray="400" stroke-dashoffset="80"
+                                            style="transform: rotateZ(135deg); transform-origin: 50%;">
+                                        </circle>
+                                        <circle cx="100" cy="100" r="85" stroke-width="30" stroke="#fff"
+                                            fill="transparent" stroke-dasharray="4, 4" stroke-dashoffset="80"
+                                            style="transform: rotateZ(135deg); transform-origin: 50%;">
+                                        </circle>
+                                    </svg>
+                                    <div class="icon">
+                                        81%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__des">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, atque
+                                incidunt ipsa id rerum blanditiis.</div>
+                            <div class="btn btn__outline">Set Target</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-xl-3">
+                    <div class="card card__style3">
+                        <h3>Duration Worked</h3>
+                        <div class="card__body">
+                            <div class="small__progressCard"
+                                style="--card-color: 28; border: solid 2px hwb(var(--card-color) 12% 2%);">
+                                <div class="progress__circle2" style="--theme-color: var(--card-color);">
+                                    <svg class="circle" height="80" width="80">
+                                        <circle cx="40" cy="40" r="35" stroke-width="10" stroke="var(--color-grey)"
+                                            fill="transparent"
+                                            style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                        </circle>
+                                        <circle cx="40" cy="40" r="35" stroke-width="10"
+                                            stroke="hwb(var(--theme-color) 12% 2%)" fill="transparent"
+                                            stroke-dasharray="314" stroke-dashoffset="170"
+                                            style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                        </circle>
+
+                                    </svg>
+                                    <div class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip6)">
+                                                <path
+                                                    d="M0.988926 17.074C0.328245 17.2006 -0.104616 17.8385 0.0219518 18.4992C0.133331 19.0814 0.644663 19.4864 1.21675 19.4864C1.29269 19.4864 1.37116 19.4788 1.4471 19.4636L6.45917 18.5017C6.74521 18.446 7.00087 18.2916 7.18313 18.0638L9.33478 15.3502L8.6159 14.9832C8.08432 14.7148 7.71471 14.2288 7.58815 13.639L5.55801 16.1982L0.988926 17.074Z"
+                                                    fill="#FF9432" data-darkreader-inline-fill=""
+                                                    style="--darkreader-inline-fill: hwb(28 24% 0%);"></path>
+                                                <path
+                                                    d="M18.84 6.493C20.3135 6.493 21.508 5.29848 21.508 3.82496C21.508 2.35144 20.3135 1.15692 18.84 1.15692C17.3664 1.15692 16.1719 2.35144 16.1719 3.82496C16.1719 5.29848 17.3664 6.493 18.84 6.493Z"
+                                                    fill="#FF9432" data-darkreader-inline-fill=""
+                                                    style="--darkreader-inline-fill: #ff993d;"></path>
+                                                <path
+                                                    d="M13.0179 3.15671C12.7369 2.86813 12.4762 2.75422 12.1902 2.75422C12.0863 2.75422 11.9826 2.76941 11.8712 2.79472L7.292 3.88067C6.65917 4.03002 6.26934 4.66539 6.41869 5.29569C6.54779 5.8374 7.02874 6.20192 7.56286 6.20192C7.65401 6.20192 7.74511 6.19179 7.83627 6.16901L11.7371 5.24507C11.9902 5.52605 13.2584 6.90057 13.4888 7.14358C11.8763 8.86996 10.2638 10.5938 8.65134 12.3202C8.62602 12.3481 8.60326 12.3759 8.58046 12.4037C8.10963 13.0036 8.25394 13.9453 8.96272 14.3022L13.9064 16.826L11.3396 20.985C10.9878 21.5571 11.165 22.3063 11.737 22.6607C11.937 22.7848 12.1572 22.843 12.3749 22.843C12.7825 22.843 13.1824 22.638 13.4128 22.2658L16.6732 16.9829C16.8529 16.6918 16.901 16.34 16.8073 16.0134C16.7137 15.6843 16.4884 15.411 16.1821 15.2565L12.8331 13.5529L16.3542 9.7863L19.0122 12.0392C19.2324 12.2265 19.5032 12.3176 19.7716 12.3176C20.0601 12.3176 20.3487 12.2113 20.574 12.0038L23.6242 9.16106C24.1002 8.71808 24.128 7.97386 23.685 7.49797C23.4521 7.24989 23.1382 7.12333 22.8243 7.12333C22.5383 7.12333 22.2497 7.22711 22.0244 7.43721L19.7412 9.56101C19.7386 9.56354 14.0178 4.1819 13.0179 3.15671Z"
+                                                    fill="#FF9432" data-darkreader-inline-fill=""
+                                                    style="--darkreader-inline-fill: #ff993d;"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip6">
+                                                    <rect width="24" height="24"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress__title">Running</div>
+                                    <div class="time">52 hours, 2min</div>
+                                </div>
+                            </div>
+                            <div class="small__progressCard"
+                                style="--card-color: 191; border: solid 2px hwb(var(--card-color) 12% 2%);">
+                                <div class="progress__circle2" style="--theme-color: var(--card-color);">
+                                    <svg class="circle" height="80" width="80">
+                                        <circle cx="40" cy="40" r="35" stroke-width="10" stroke="var(--color-grey)"
+                                            fill="transparent"
+                                            style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                        </circle>
+                                        <circle cx="40" cy="40" r="35" stroke-width="10"
+                                            stroke="hwb(var(--theme-color) 12% 2%)" fill="transparent"
+                                            stroke-dasharray="314" stroke-dashoffset="170"
+                                            style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                        </circle>
+
+                                    </svg>
+                                    <div class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.8586 5.22596L5.87121 10.5542C5.50758 11.0845 5.64394 11.8068 6.17172 12.1679L11.1945 15.6098V18.9558C11.1945 19.5921 11.6995 20.125 12.3359 20.1376C12.9874 20.1477 13.5177 19.6249 13.5177 18.976V15.0012C13.5177 14.6174 13.3283 14.2588 13.0126 14.0442L9.79041 11.8346L12.5025 8.95833L13.8914 12.1225C14.0758 12.5442 14.4949 12.8169 14.9546 12.8169H19.1844C19.8207 12.8169 20.3536 12.3119 20.3662 11.6755C20.3763 11.024 19.8536 10.4937 19.2046 10.4937H15.7172C15.2576 9.44821 14.7677 8.41285 14.3409 7.35225C14.1237 6.81689 14.0025 6.58457 13.6036 6.21588C13.5227 6.14013 12.9596 5.62498 12.4571 5.16538C11.995 4.74616 11.2828 4.77394 10.8586 5.22596Z"
+                                                fill="#1EA7C5" data-darkreader-inline-fill=""
+                                                style="--darkreader-inline-fill: #49c8e3;"></path>
+                                            <path
+                                                d="M15.6162 5.80678C17.0861 5.80678 18.2778 4.61514 18.2778 3.14517C18.2778 1.6752 17.0861 0.483551 15.6162 0.483551C14.1462 0.483551 12.9545 1.6752 12.9545 3.14517C12.9545 4.61514 14.1462 5.80678 15.6162 5.80678Z"
+                                                fill="#1EA7C5" data-darkreader-inline-fill=""
+                                                style="--darkreader-inline-fill: #49c8e3;"></path>
+                                            <path
+                                                d="M4.89899 23.5164C7.60463 23.5164 9.79798 21.323 9.79798 18.6174C9.79798 15.9117 7.60463 13.7184 4.89899 13.7184C2.19335 13.7184 0 15.9117 0 18.6174C0 21.323 2.19335 23.5164 4.89899 23.5164Z"
+                                                fill="#1EA7C5" data-darkreader-inline-fill=""
+                                                style="--darkreader-inline-fill: hwb(191 29% 11%);"></path>
+                                            <path
+                                                d="M19.101 23.5164C21.8066 23.5164 24 21.323 24 18.6174C24 15.9117 21.8066 13.7184 19.101 13.7184C16.3954 13.7184 14.202 15.9117 14.202 18.6174C14.202 21.323 16.3954 23.5164 19.101 23.5164Z"
+                                                fill="#1EA7C5" data-darkreader-inline-fill=""
+                                                style="--darkreader-inline-fill: #49c8e3;"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress__title">Cycling</div>
+                                    <div class="time">23 hours, 45min</div>
+                                </div>
+                            </div>
+                            <div class="small__progressCard"
+                                style="--card-color: 292; border: solid 2px hwb(var(--card-color) 12% 2%);">
+                                <div class="progress__circle2" style="--theme-color: var(--card-color);">
+                                    <svg class="circle" height="80" width="80">
+                                        <circle cx="40" cy="40" r="35" stroke-width="10" stroke="var(--color-grey)"
+                                            fill="transparent"
+                                            style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                        </circle>
+                                        <circle cx="40" cy="40" r="35" stroke-width="10"
+                                            stroke="hwb(var(--theme-color) 12% 2%)" fill="transparent"
+                                            stroke-dasharray="314" stroke-dashoffset="170"
+                                            style="transform: rotateZ(-90deg); transform-origin: 50%;">
+                                        </circle>
+
+                                    </svg>
+                                    <div class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip7)">
+                                                <path
+                                                    d="M11.9997 5.9999C13.6566 5.9999 14.9997 4.65677 14.9997 2.99995C14.9997 1.34312 13.6566 0 11.9997 0C10.3429 0 8.9998 1.34312 8.9998 2.99995C8.9998 4.65677 10.3429 5.9999 11.9997 5.9999Z"
+                                                    fill="#C046D3" data-darkreader-inline-fill=""
+                                                    style="--darkreader-inline-fill: #c554d6;"></path>
+                                                <path
+                                                    d="M17.8305 21.8297L14.1361 23.2153L15.9733 23.9042C16.764 24.1978 17.6171 23.791 17.9046 23.0261C18.0577 22.618 18.0124 22.1905 17.8305 21.8297Z"
+                                                    fill="#C046D3" data-darkreader-inline-fill=""
+                                                    style="--darkreader-inline-fill: #c554d6;"></path>
+                                                <path
+                                                    d="M5.02677 16.5949C4.25263 16.3078 3.3869 16.6974 3.09543 17.473C2.80467 18.2486 3.19799 19.1128 3.97354 19.4043L5.5918 20.0111L9.86412 18.4088L5.02677 16.5949Z"
+                                                    fill="#C046D3" data-darkreader-inline-fill=""
+                                                    style="--darkreader-inline-fill: hwb(292 33% 16%);"></path>
+                                                <path
+                                                    d="M20.9045 17.473C20.613 16.6974 19.7473 16.3078 18.9732 16.5949L6.97345 21.0948C6.19781 21.3863 5.80453 22.2505 6.0953 23.0262C6.38278 23.7908 7.23572 24.198 8.02664 23.9043L20.0264 19.4044C20.8021 19.1129 21.1953 18.2487 20.9045 17.473Z"
+                                                    fill="#C046D3" data-darkreader-inline-fill=""
+                                                    style="--darkreader-inline-fill: #c554d6;"></path>
+                                                <path
+                                                    d="M22.4998 11.9998H18.9271L16.3417 6.82899C16.073 6.29213 15.5265 5.98627 14.9632 5.99991L11.9997 5.9999L9.03663 5.99991C8.47343 5.98627 7.92757 6.29217 7.65828 6.82899L5.07289 11.9998H1.50022C0.671898 11.9998 0.000274658 12.6714 0.000274658 13.4997C0.000274658 14.328 0.671898 14.9997 1.50022 14.9997H6.00012C6.56848 14.9997 7.08776 14.6789 7.34187 14.1706L9.00002 10.8543V16.483L11.9999 17.6079L14.9999 16.4827V10.8543L16.6581 14.1706C16.9122 14.6789 17.4315 14.9997 17.9998 14.9997H22.4997C23.328 14.9997 23.9997 14.328 23.9997 13.4997C23.9997 12.6714 23.3281 11.9998 22.4998 11.9998Z"
+                                                    fill="#C046D3" data-darkreader-inline-fill=""
+                                                    style="--darkreader-inline-fill: #c554d6;"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip7">
+                                                    <rect width="24" height="24" fill="white"
+                                                        data-darkreader-inline-fill=""
+                                                        style="--darkreader-inline-fill: #e8e6e3;"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress__title">Yoga</div>
+                                    <div class="time">16 hours, 2min</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl-9">
+                    <div class="card long__card">
+                        <div class="card__header">
+                            <div class="left">
+                                <h3>Calories Chart</h3>
+                                <small>Lorem ipsum dolor sit amet.</small>
+                            </div>
+                            <select name="period" id="">
+                                <option value="" selected>Weekly</option>
+                                <option value="">Monthly</option>
+                                <option value="">Yearly</option>
+                                <option value="">Daily</option>
+                            </select>
+                        </div>
+                        <div class="chart">
+                            <div class="vertical__f">
+                                <span>80</span>
+                                <span>40</span>
+                                <span>0</span>
+                                <span>-40</span>
+                                <span>-80</span>
+                            </div>
+                            <div class="chart__box" style="--no-c: 12;" id="chart__box2">
+                                <svg id="chart2" height="315px" width="100%">
+                                    <g class="table_lines_group" style="transform: translateY(calc(100% / 10));"></g>
+                                </svg>
+                                <script>
+                                    chart_box = document.getElementById('chart__box2');
+                                    width = chart_box.offsetWidth;
+                                    height = chart_box.offsetHeight;
+                                    svg = document.getElementById('chart2');
+                                    no_c_h = 20;
+                                    no_c_v = 5;
+                                    line_gap = width / no_c_h;
+                                    line_gap_v = height / no_c_v;
+                                    table_lines_group = document.querySelector('#chart2 .table_lines_group');
+
+                                    createHLines(no_c_v, table_lines_group, width, line_gap_v);
+
+
+
+                                </script>
+                            </div>
+                            <div class="horizontal__f" id="chart2_horizontal_f">
+                                <div></div>
+                            </div>
+                            <script>
+                                var h = document.querySelector('#chart2_horizontal_f div');
+
+                                for (let i = 1; i <= 20; i++) {
+                                    n = document.createElement('span');
+                                    n.innerHTML = i;
+                                    h.appendChild(n);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card long__card">
+                        <div class="card__header">
+                            <div class="left">
+                                <h3>Featured Diet Menus</h3>
+                                <small>Lorem ipsum dolor sit amet.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="header">
+            <h1 class="header__title">Dashboard</h1>
+            <div class="header__controls">
+                <div class="header__search">
+                    <input type="search" name="search" id="" placeholder="Search here">
+                    <div class="icon__btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.7871 22.7761L17.9548 16.9437C19.5193 15.145 20.4665 12.7982 20.4665 10.2333C20.4665 4.58714 15.8741 0 10.2333 0C4.58714 0 0 4.59246 0 10.2333C0 15.8741 4.59246 20.4665 10.2333 20.4665C12.7982 20.4665 15.145 19.5193 16.9437 17.9548L22.7761 23.7871C22.9144 23.9255 23.1007 24 23.2816 24C23.4625 24 23.6488 23.9308 23.7871 23.7871C24.0639 23.5104 24.0639 23.0528 23.7871 22.7761ZM1.43149 10.2333C1.43149 5.38004 5.38004 1.43681 10.2279 1.43681C15.0812 1.43681 19.0244 5.38537 19.0244 10.2333C19.0244 15.0812 15.0812 19.035 10.2279 19.035C5.38004 19.035 1.43149 15.0865 1.43149 10.2333Z"
+                                fill="#A4A4A4"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header__btns">
+                    <div class="icon__btn" id="header__floatingCard1"
+                        onclick="toggleHeaderFloatingCard('header__floatingCard1')">
+                        <div class="notification__no">10</div>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22.75 15.8385V13.0463C22.7471 10.8855 21.9385 8.80353 20.4821 7.20735C19.0258 5.61116 17.0264 4.61555 14.875 4.41516V2.625C14.875 2.39294 14.7828 2.17038 14.6187 2.00628C14.4546 1.84219 14.2321 1.75 14 1.75C13.7679 1.75 13.5454 1.84219 13.3813 2.00628C13.2172 2.17038 13.125 2.39294 13.125 2.625V4.41534C10.9736 4.61572 8.97429 5.61131 7.51794 7.20746C6.06159 8.80361 5.25291 10.8855 5.25 13.0463V15.8383C4.26257 16.0412 3.37529 16.5784 2.73774 17.3593C2.10019 18.1401 1.75134 19.1169 1.75 20.125C1.75076 20.821 2.02757 21.4882 2.51969 21.9803C3.01181 22.4724 3.67904 22.7492 4.375 22.75H9.71346C9.91521 23.738 10.452 24.6259 11.2331 25.2636C12.0142 25.9013 12.9916 26.2497 14 26.2497C15.0084 26.2497 15.9858 25.9013 16.7669 25.2636C17.548 24.6259 18.0848 23.738 18.2865 22.75H23.625C24.321 22.7492 24.9882 22.4724 25.4803 21.9803C25.9724 21.4882 26.2492 20.821 26.25 20.125C26.2486 19.117 25.8998 18.1402 25.2622 17.3594C24.6247 16.5786 23.7374 16.0414 22.75 15.8385ZM7 13.0463C7.00232 11.2113 7.73226 9.45223 9.02974 8.15474C10.3272 6.85726 12.0863 6.12732 13.9212 6.125H14.0788C15.9137 6.12732 17.6728 6.85726 18.9703 8.15474C20.2677 9.45223 20.9977 11.2113 21 13.0463V15.75H7V13.0463ZM14 24.5C13.4589 24.4983 12.9316 24.3292 12.4905 24.0159C12.0493 23.7026 11.716 23.2604 11.5363 22.75H16.4637C16.284 23.2604 15.9507 23.7026 15.5095 24.0159C15.0684 24.3292 14.5411 24.4983 14 24.5ZM23.625 21H4.375C4.14298 20.9999 3.9205 20.9076 3.75644 20.7436C3.59237 20.5795 3.50014 20.357 3.5 20.125C3.50076 19.429 3.77757 18.7618 4.26969 18.2697C4.76181 17.7776 5.42904 17.5008 6.125 17.5H21.875C22.571 17.5008 23.2382 17.7776 23.7303 18.2697C24.2224 18.7618 24.4992 19.429 24.5 20.125C24.4999 20.357 24.4076 20.5795 24.2436 20.7436C24.0795 20.9076 23.857 20.9999 23.625 21Z"
+                                fill="#555555"></path>
+                        </svg>
+                        <div class="header__floatingCard" style="right: auto;">
+                            <div class="notifications scrollable__container">
+                                <div class="item">
+                                    <div class="left">
+                                        <div class="item__icon">
+                                            <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="item__title">Dr sultads Send you Photo</div>
+                                        <div class="item__time">29 July 2023 - 02:26 PM</div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--icon-color: 189;">
+                                    <div class="left">
+                                        <div class="item__icon">
+                                            <span>kg</span>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="item__title">Resport created successfully</div>
+                                        <div class="item__time">29 July 2023 - 02:26 PM</div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--icon-color: 150;">
+                                    <div class="left">
+                                        <div class="item__icon">
+                                            <i class="fa fa-home"></i>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="item__title">Reminder : Treatment Time!</div>
+                                        <div class="item__time">29 July 2023 - 02:26 PM</div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">
+                                        <div class="item__icon">
+                                            <img src="/images/1.7c3d5aa9189e7755c470.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="item__title">Dr sultads Send you Photo</div>
+                                        <div class="item__time">29 July 2023 - 02:26 PM</div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--icon-color: 100;">
+                                    <div class="left">
+                                        <div class="item__icon">
+                                            <span>kg</span>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="item__title">Resport created successfully</div>
+                                        <div class="item__time">29 July 2023 - 02:26 PM</div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--icon-color: 300;">
+                                    <div class="left">
+                                        <div class="item__icon">
+                                            <i class="fa fa-home"></i>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="item__title">Reminder : Treatment Time!</div>
+                                        <div class="item__time">29 July 2023 - 02:26 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <div class="text">
+                                    See all notifications
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon__btn" id="chatbox__btn" onclick="toggleChatBox()">
+                        <div class="notification__no">10</div>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22.4605 3.84888H5.31688C4.64748 3.84961 4.00571 4.11586 3.53237 4.58919C3.05903 5.06253 2.79279 5.7043 2.79205 6.3737V18.1562C2.79279 18.8256 3.05903 19.4674 3.53237 19.9407C4.00571 20.4141 4.64748 20.6803 5.31688 20.6811C5.54005 20.6812 5.75404 20.7699 5.91184 20.9277C6.06964 21.0855 6.15836 21.2995 6.15849 21.5227V23.3168C6.15849 23.6215 6.24118 23.9204 6.39774 24.1818C6.5543 24.4431 6.77886 24.6571 7.04747 24.8009C7.31608 24.9446 7.61867 25.0128 7.92298 24.9981C8.22729 24.9834 8.52189 24.8863 8.77539 24.7173L14.6173 20.8224C14.7554 20.7299 14.918 20.6807 15.0842 20.6811H19.187C19.7383 20.68 20.2743 20.4994 20.7137 20.1664C21.1531 19.8335 21.4721 19.3664 21.6222 18.8359L24.8966 7.05011C24.9999 6.67481 25.0152 6.28074 24.9414 5.89856C24.8675 5.51637 24.7064 5.15639 24.4707 4.84663C24.235 4.53687 23.931 4.28568 23.5823 4.11263C23.2336 3.93957 22.8497 3.84931 22.4605 3.84888ZM23.2733 6.60304L20.0006 18.3847C19.95 18.5614 19.8432 18.7168 19.6964 18.8275C19.5496 18.9381 19.3708 18.9979 19.187 18.9978H15.0842C14.5856 18.9972 14.0981 19.1448 13.6837 19.4219L7.84171 23.3168V21.5227C7.84097 20.8533 7.57473 20.2115 7.10139 19.7382C6.62805 19.2648 5.98628 18.9986 5.31688 18.9978C5.09371 18.9977 4.87972 18.909 4.72192 18.7512C4.56412 18.5934 4.4754 18.3794 4.47527 18.1562V6.3737C4.4754 6.15054 4.56412 5.93655 4.72192 5.77874C4.87972 5.62094 5.09371 5.53223 5.31688 5.5321H22.4605C22.5905 5.53243 22.7188 5.56277 22.8353 5.62076C22.9517 5.67875 23.0532 5.76283 23.1318 5.86646C23.2105 5.97008 23.2642 6.09045 23.2887 6.21821C23.3132 6.34597 23.308 6.47766 23.2733 6.60304Z"
+                                fill="#555555"></path>
+                            <path
+                                d="M7.84173 11.4233H12.0498C12.273 11.4233 12.4871 11.3347 12.6449 11.1768C12.8027 11.019 12.8914 10.8049 12.8914 10.5817C12.8914 10.3585 12.8027 10.1444 12.6449 9.98661C12.4871 9.82878 12.273 9.74011 12.0498 9.74011H7.84173C7.61852 9.74011 7.40446 9.82878 7.24662 9.98661C7.08879 10.1444 7.00012 10.3585 7.00012 10.5817C7.00012 10.8049 7.08879 11.019 7.24662 11.1768C7.40446 11.3347 7.61852 11.4233 7.84173 11.4233Z"
+                                fill="#555555"></path>
+                            <path
+                                d="M15.4162 13.1066H7.84173C7.61852 13.1066 7.40446 13.1952 7.24662 13.3531C7.08879 13.5109 7.00012 13.725 7.00012 13.9482C7.00012 14.1714 7.08879 14.3855 7.24662 14.5433C7.40446 14.7011 7.61852 14.7898 7.84173 14.7898H15.4162C15.6394 14.7898 15.8535 14.7011 16.0113 14.5433C16.1692 14.3855 16.2578 14.1714 16.2578 13.9482C16.2578 13.725 16.1692 13.5109 16.0113 13.3531C15.8535 13.1952 15.6394 13.1066 15.4162 13.1066Z"
+                                fill="#555555"></path>
+                        </svg>
+                    </div>
+                    <div class="icon__btn" id="header__floatingCard3"
+                        onclick="toggleHeaderFloatingCard('header__floatingCard3')">
+                        <div class="notification__no">6</div>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.625 6.12506H22.75V2.62506C22.75 2.47268 22.7102 2.32295 22.6345 2.19068C22.5589 2.05841 22.45 1.94819 22.3186 1.87093C22.1873 1.79367 22.0381 1.75205 21.8857 1.75019C21.7333 1.74832 21.5831 1.78629 21.4499 1.86031L14 5.99915L6.55007 1.86031C6.41688 1.78629 6.26667 1.74832 6.11431 1.75019C5.96194 1.75205 5.8127 1.79367 5.68136 1.87093C5.55002 1.94819 5.44113 2.05841 5.36547 2.19068C5.28981 2.32295 5.25001 2.47268 5.25 2.62506V6.12506H4.375C3.67904 6.12582 3.01181 6.40263 2.51969 6.89475C2.02757 7.38687 1.75076 8.0541 1.75 8.75006V11.3751C1.75076 12.071 2.02757 12.7383 2.51969 13.2304C3.01181 13.7225 3.67904 13.9993 4.375 14.0001H5.25V23.6251C5.25076 24.321 5.52757 24.9882 6.01969 25.4804C6.51181 25.9725 7.17904 26.2493 7.875 26.2501H20.125C20.821 26.2493 21.4882 25.9725 21.9803 25.4804C22.4724 24.9882 22.7492 24.321 22.75 23.6251V14.0001H23.625C24.321 13.9993 24.9882 13.7225 25.4803 13.2304C25.9724 12.7383 26.2492 12.071 26.25 11.3751V8.75006C26.2492 8.0541 25.9724 7.38687 25.4803 6.89475C24.9882 6.40263 24.321 6.12582 23.625 6.12506ZM21 6.12506H17.3769L21 4.11256V6.12506ZM7 4.11256L10.6231 6.12506H7V4.11256ZM7 23.6251V14.0001H13.125V24.5001H7.875C7.64303 24.4998 7.42064 24.4075 7.25661 24.2434C7.09258 24.0794 7.0003 23.857 7 23.6251ZM21 23.6251C20.9997 23.857 20.9074 24.0794 20.7434 24.2434C20.5794 24.4075 20.357 24.4998 20.125 24.5001H14.875V14.0001H21V23.6251ZM24.5 11.3751C24.4997 11.607 24.4074 11.8294 24.2434 11.9934C24.0794 12.1575 23.857 12.2498 23.625 12.2501H4.375C4.14303 12.2498 3.92064 12.1575 3.75661 11.9934C3.59258 11.8294 3.5003 11.607 3.5 11.3751V8.75006C3.5003 8.51809 3.59258 8.2957 3.75661 8.13167C3.92064 7.96764 4.14303 7.87536 4.375 7.87506H23.625C23.857 7.87536 24.0794 7.96764 24.2434 8.13167C24.4074 8.2957 24.4997 8.51809 24.5 8.75006V11.3751Z"
+                                fill="#555555"></path>
+                        </svg>
+                        <div class="header__floatingCard" x-placement="bottom-end">
+                            <div class="payments__timeline scrollable__container">
+                                <div class="item" style="--item-color: 345;">
+                                    <div class="item__box">
+                                        <div class="item__time">10 minutes ago</div>
+                                        <div class="item__title">Youtube, a video-sharing website, goes live
+                                            <span>$500</span>
+                                        </div>
+                                        <div class="item__circle">
+                                            <div class="circle__big">
+                                                <div class="circle__small"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--item-color: 145;">
+                                    <div class="item__box">
+                                        <div class="item__time">20 minutes ago</div>
+                                        <div class="item__title">New order placed <span>#XF-2356</span></div>
+                                        <div class="item__des">Lorem ipsum dolor sit amet, consectetur adipisicing...
+                                        </div>
+                                        <div class="item__circle">
+                                            <div class="circle__big">
+                                                <div class="circle__small"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--item-color: 100;">
+                                    <div class="item__box">
+                                        <div class="item__time">30 minutes ago</div>
+                                        <div class="item__title">John just bought your product
+                                            <span>Sell $250</span>
+                                        </div>
+                                        <div class="item__circle">
+                                            <div class="circle__big">
+                                                <div class="circle__small"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--item-color: 205;">
+                                    <div class="item__box">
+                                        <div class="item__time">10 minutes ago</div>
+                                        <div class="item__title">StumbleUpon is acquired by eBay</div>
+                                        <div class="item__circle">
+                                            <div class="circle__big">
+                                                <div class="circle__small"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--item-color: 55;">
+                                    <div class="item__box">
+                                        <div class="item__time">45 minutes ago</div>
+                                        <div class="item__title">Mashable, a news website and blog, goes live</div>
+                                        <div class="item__circle">
+                                            <div class="circle__big">
+                                                <div class="circle__small"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="--item-color: 300;">
+                                    <div class="item__box">
+                                        <div class="item__time">50 minutes ago</div>
+                                        <div class="item__title">Youtube, a video-sharing website, goes live
+                                            <span>$500</span>
+                                        </div>
+                                        <div class="item__des">Lorem ipsum dolor sit amet, consectetur adipisicing...
+                                        </div>
+                                        <div class="item__circle">
+                                            <div class="circle__big">
+                                                <div class="circle__small"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="icon__btn" id="header__floatingCard4"
+                        onclick="toggleHeaderFloatingCard('header__floatingCard4')">
+                        <img src="/images/17.d7f4d163bf65c49b1ee9.jpg" alt="">
+                        <div class="header__floatingCard small">
+                            <div class="profile__iconMenu">
+                                <div class="item" style="--item-color: blue;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <div class="item__text">Profile</div>
+                                </div>
+                                <div class="item" style="--item-color: green;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M121 32C91.6 32 66 52 58.9 80.5L1.9 308.4C.6 313.5 0 318.7 0 323.9V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V323.9c0-5.2-.6-10.4-1.9-15.5l-57-227.9C446 52 420.4 32 391 32H121zm0 64H391l48 192H387.8c-12.1 0-23.2 6.8-28.6 17.7l-14.3 28.6c-5.4 10.8-16.5 17.7-28.6 17.7H195.8c-12.1 0-23.2-6.8-28.6-17.7l-14.3-28.6c-5.4-10.8-16.5-17.7-28.6-17.7H73L121 96z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <div class="item__text">Inbox</div>
+                                </div>
+                                <a href="/index.html" class="item" style="--item-color: red;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <div class="item__text">Logout</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function toggleHeaderFloatingCard(id) {
+                        document.querySelector(`#${id} .header__floatingCard`).classList.toggle("active");
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
