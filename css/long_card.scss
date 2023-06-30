@@ -59,8 +59,36 @@
 
                 span {
                     transform: rotateZ(-45deg);
-                    font-size: .8rem;
+                    font-size: .6rem;
                     font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $break-md) {
+    .long__card {
+        .chart {
+            .horizontal__f {
+                >div {
+                    span {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $break-xl) {
+    .long__card {
+        .chart {
+            .horizontal__f {
+                >div {
+                    span {
+                        font-size: 1rem;
+                    }
                 }
             }
         }

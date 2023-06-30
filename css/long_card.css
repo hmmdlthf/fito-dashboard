@@ -52,6 +52,17 @@
 }
 .long__card .chart .horizontal__f > div span {
   transform: rotateZ(-45deg);
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .long__card .chart .horizontal__f > div span {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1200px) {
+  .long__card .chart .horizontal__f > div span {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=long_card.css.map */
