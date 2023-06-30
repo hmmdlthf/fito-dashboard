@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   z-index: 13;
-  padding-inline: 2rem;
+  padding-left: 2rem;
   height: 7rem;
   background-color: var(--color-bg);
 }
@@ -82,7 +82,7 @@
   justify-content: flex-end;
   top: 0;
   right: 0;
-  left: 9.5rem;
+  left: 7.5rem;
   height: 7rem;
   z-index: 12;
   padding-inline: 2rem;
